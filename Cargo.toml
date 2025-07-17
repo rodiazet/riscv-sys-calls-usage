@@ -4,3 +4,22 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+reth-stateless = { git = "https://github.com/kevaundray/reth", rev = "03364a836774c72f4e354de924330fee6a41be68", optional = true }
+reth-chainspec = { git = "https://github.com/kevaundray/reth", rev = "03364a836774c72f4e354de924330fee6a41be68", optional = true }
+reth-evm-ethereum = { git = "https://github.com/kevaundray/reth", rev = "03364a836774c72f4e354de924330fee6a41be68", optional = true }
+alloy-primitives = { version = "1.2.0", optional = true }
+alloy-consensus = { version = "1.0.9", optional = true }
+alloy-eips = { version = "1.0.9", optional = true }
+
+[features]
+stateless-program = [
+    "dep:reth-stateless",
+    "dep:reth-chainspec",
+    "dep:reth-evm-ethereum",
+    "dep:alloy-primitives",
+    "dep:alloy-consensus",
+    "dep:alloy-eips"
+]
+default = ["stateless-program"]
+
+
