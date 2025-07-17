@@ -416,6 +416,9 @@ rust
 ```
 
 **Only one** dependency does not build properly:
+
+**UPDATE**: After turning off default features for `getrandom` it builds to this target.
+
 ```
 Compiling getrandom v0.2.16
 error: target is not supported, for more information see: https://docs.rs/getrandom/#unsupported-targets
