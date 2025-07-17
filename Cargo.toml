@@ -11,6 +11,9 @@ alloy-primitives = { version = "1.2.0", optional = true }
 alloy-consensus = { version = "1.0.9", optional = true }
 alloy-eips = { version = "1.0.9", optional = true }
 
+[target.'cfg(target_os = "zkvm")'.dependencies]
+getrandom = { version = "0.2", package = "getrandom", default-features = false, features = ["custom"] }
+
 [features]
 stateless-program = [
     "dep:reth-stateless",

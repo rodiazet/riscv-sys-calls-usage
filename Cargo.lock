@@ -3045,6 +3045,7 @@ dependencies = [
  "alloy-consensus",
  "alloy-eips",
  "alloy-primitives",
+ "getrandom 0.2.16",
  "reth-chainspec",
  "reth-evm-ethereum",
  "reth-stateless",
